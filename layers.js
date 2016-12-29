@@ -15,8 +15,12 @@ var AdditionalMapLayers = (function(){
 	var thunderforestAttr = osmAttr + ', Tiles courtesy of <a href="http://www.thunderforest.com/" target="_blank">Andy Allan</a>';
 	var mtbMapAttr = osmAttr + ', Tiles courtesy of <a href="http://mtbmap.cz/" target="_blank">mtbmap.cz</a>';
 	var mapyCzAttr = '&copy; <a href="https://www.seznam.cz/" target="_blank">Seznam.cz, a.s</a>, ' + osmAttr;
+	var icgcAttr = '&copy; <a href="http://www.icgc.cat/" target="_blank">Institut Cartogràfic i Geològic de Catalunya</a>';
 	return [
-		{type: "openstreetmap", name: "OpenStreetMap",
+		{type: "icgc", name: "ICGC - Catalunya",
+			url: "http://mapcache.icc.cat/map/bases_noutm/wmts/topo/GRID3857/{z}/{x}/{y}.jpeg",//"http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+			opts: {maxZoom: 20, maxNativeZoom: 18, attribution: osmAttr}},		
+		/*{type: "openstreetmap", name: "OpenStreetMap",
 			url: "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
 			opts: {maxZoom: 20, maxNativeZoom: 19, attribution: osmAttr}},
 		{type: "opencyclemap", name: "OpenCycleMap",
@@ -40,5 +44,5 @@ var AdditionalMapLayers = (function(){
 			overlay:
 				{url: "https://m{s}.mapserver.mapy.cz/hybrid-trail_bike-m/{z}-{x}-{y}",
 					opts: {minZoom: 2, maxZoom: 20, maxNativeZoom: 18, subdomains: "1234", attribution: mapyCzAttr}}},
-	];
+	*/];
 })();
